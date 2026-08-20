@@ -437,7 +437,11 @@ summary:focus-visible,
   gap: var(--mds-spacing-6);
 }
 
-.cards--four { grid-template-columns: repeat(4, 1fr); }
+.cards--four  { grid-template-columns: repeat(4, 1fr); }
+.cards--five  { grid-template-columns: repeat(5, 1fr); }
+
+/* UCF Input — Marine Green top accent (MDS dataviz palette, third colour) */
+.card--ucf { border-top: 3px solid #2EBBA5; }
 
 .card {
   background: var(--mds-color-white);
@@ -738,6 +742,9 @@ summary:focus-visible,
 
 .step__cost [data-lucide] { width: 16px; height: 16px; }
 
+.step__link { color: #2251FF; text-decoration: none; }
+.step__link:hover, .step__link:focus { text-decoration: underline; }
+
 /* ============================================================
    FAQ
    ============================================================ */
@@ -844,7 +851,8 @@ summary:focus-visible,
 @media (max-width: 1024px) {
   .figures__grid { grid-template-columns: repeat(2, 1fr); }
   .cards,
-  .cards--four { grid-template-columns: repeat(2, 1fr); }
+  .cards--four,
+  .cards--five { grid-template-columns: repeat(2, 1fr); }
   .benefits { grid-template-columns: repeat(2, 1fr); }
   .statuses { grid-template-columns: 1fr; }
   .hero__title { font-size: var(--mds-font-size-heading-1); line-height: var(--mds-line-height-heading-1); }
@@ -886,6 +894,7 @@ summary:focus-visible,
   .figures__grid,
   .cards,
   .cards--four,
+  .cards--five,
   .benefits { grid-template-columns: 1fr; }
 
   /* Stack before/after so neither column gets squeezed */
