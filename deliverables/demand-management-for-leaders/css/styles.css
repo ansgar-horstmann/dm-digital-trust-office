@@ -1055,6 +1055,96 @@ summary:focus-visible,
 }
 
 /* ============================================================
+   ROUTING PAGE
+   ============================================================ */
+.routing-hero {
+  background: var(--mds-color-deep-blue-900);
+  color: var(--mds-color-text-inverse);
+  padding-block: var(--mds-spacing-12) var(--mds-spacing-16);
+}
+
+.routing-hero__eyebrow {
+  font-size: var(--mds-font-size-body-xs);
+  line-height: var(--mds-line-height-body-xs);
+  font-weight: var(--mds-font-weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--mds-spacing-3);
+}
+
+.routing-hero__title {
+  font-size: var(--mds-font-size-heading-3);
+  line-height: var(--mds-line-height-heading-3);
+  color: var(--mds-color-text-inverse);
+  margin-bottom: var(--mds-spacing-4);
+}
+
+.routing-hero__lead {
+  font-size: var(--mds-font-size-body-lg);
+  line-height: var(--mds-line-height-body-lg);
+  font-weight: var(--mds-font-weight-light);
+  color: rgba(255,255,255,0.86);
+  max-width: 74ch;
+}
+
+.routing-section {
+  padding-block: var(--mds-spacing-12) var(--mds-spacing-20);
+}
+
+.routing-search-wrap {
+  margin-bottom: var(--mds-spacing-6);
+}
+
+.routing-search {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  padding: var(--mds-spacing-3) var(--mds-spacing-4);
+  font-family: var(--mds-font-body);
+  font-size: var(--mds-font-size-body-md);
+  line-height: var(--mds-line-height-body-md);
+  color: var(--mds-color-text-default);
+  background: var(--mds-color-white);
+  border: 1px solid var(--mds-color-border-default);
+  border-radius: var(--mds-radius-sm);
+  outline: none;
+  transition: border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+.routing-search:focus {
+  border-color: var(--mds-color-electric-blue-500);
+  box-shadow: 0 0 0 3px rgba(34,81,255,0.15);
+}
+
+.routing-search::placeholder {
+  color: var(--mds-color-neutral-54);
+}
+
+.routing-count {
+  font-size: var(--mds-font-size-body-sm);
+  line-height: var(--mds-line-height-body-sm);
+  color: var(--mds-color-neutral-60);
+  margin-top: var(--mds-spacing-3);
+  min-height: 1.4em;
+}
+
+/* Routing table — Deep Blue header, alternating rows */
+.table--routing thead th {
+  background: #051C2C;
+  color: #FFFFFF;
+}
+
+.table--routing tbody tr:nth-child(even) td,
+.table--routing tbody tr:nth-child(even) th {
+  background: #F2F2F2;
+}
+
+.table--routing tbody tr.routing-hidden {
+  display: none;
+}
+
+/* ============================================================
    DEMAND PIPELINE — horizontal flow diagram
    ============================================================ */
 .demand-pipeline {
