@@ -379,12 +379,11 @@
       </p>
       <div class="table-scroll">
         <table class="table">
-          <caption class="sr-only">Priority bands, score ranges and remediation windows</caption>
+          <caption class="sr-only">Priority bands and score ranges</caption>
           <thead>
             <tr>
               <th scope="col">Band</th>
               <th scope="col">Score</th>
-              <th scope="col">Remediation window</th>
               <th scope="col">What it means in practice</th>
             </tr>
           </thead>
@@ -392,57 +391,68 @@
             <tr>
               <th scope="row"><span class="pill pill--high"><i data-lucide="chevrons-up" aria-hidden="true"></i>High</span></th>
               <td>15 &ndash; 22</td>
-              <td><strong>60 days</strong></td>
               <td>Sensitive data or a tier-one asset combined with material business impact. Anything with a regulatory obligation lands here automatically, whatever else it scores.</td>
             </tr>
             <tr>
               <th scope="row"><span class="pill pill--med"><i data-lucide="chevron-up" aria-hidden="true"></i>Medium</span></th>
               <td>8 &ndash; 14</td>
-              <td><strong>120 days</strong></td>
               <td>The majority of growth and improvement work. Tracked and reported, on a longer clock.</td>
             </tr>
             <tr>
               <th scope="row"><span class="pill pill--low"><i data-lucide="minus" aria-hidden="true"></i>Low</span></th>
               <td>0 &ndash; 7</td>
-              <td>No fixed window</td>
               <td>Runs at team cadence. Visible in the backlog, not on a countdown.</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h3 class="subhead">The five things a demand can be</h3>
+      <h3 class="subhead">The six things a demand can be</h3>
       <p class="subhead__note">Category is decided once, early, and determines which track the demand
         follows. It is the single most useful field for a leader to understand, because it tells you whether
         something is on a clock or in a queue.</p>
-      <div class="cards cards--five">
-        <article class="card card--tight">
-          <h4 class="card__title">Issue management</h4>
-          <p>A live risk, control gap or regulatory matter. Reported to the committee, and the category that
-            the 60- or 120-day clock will apply to. <strong>33 today.</strong></p>
-        </article>
-        <article class="card card--tight">
-          <h4 class="card__title">Team backlog</h4>
-          <p>Standard delivery work for a specific team's plan. The most common case by a wide margin.
-            <strong>203 today.</strong></p>
-        </article>
-        <article class="card card--tight">
-          <h4 class="card__title">External request</h4>
-          <p>Comes from outside the domain and needs coordination before anyone can own it.
-            <strong>16 today.</strong></p>
-        </article>
-        <article class="card card--tight">
-          <h4 class="card__title">Resource request</h4>
-          <p>A staffing, budget or tooling ask rather than something to be built. Routed to portfolio review,
-            not to a delivery team.</p>
-        </article>
-        <article class="card card--tight card--ucf">
-          <h4 class="card__title">UCF input</h4>
-          <p>A demand that introduces an additional control, requirement, or technical implementation need
-            into the <strong>Unified Control Framework (UCF)</strong> or the
-            <strong>Continuous Control Verification (CCV)</strong> programme. Tracked to ensure new controls
-            are formally registered, assigned, and verified — not just delivered and forgotten.</p>
-        </article>
+      <div class="demand-pipeline">
+        <div class="demand-pipeline__source">
+          <div class="demand-pipeline__badge">DEMAND</div>
+        </div>
+        <div class="demand-pipeline__connector" aria-hidden="true">
+          <svg class="demand-pipeline__arrow-svg" viewBox="0 0 64 24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="12" x2="52" y2="12" stroke="#2251FF" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="44,5 57,12 44,19" stroke="#2251FF" stroke-width="2" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="demand-pipeline__outcomes">
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--issue" aria-hidden="true"></span>
+            <span class="demand-outcome__label">Issue management</span>
+            <span class="demand-outcome__desc">A live risk, control gap or regulatory matter. Reported to the committee; the 60- or 120-day remediation clock applies here. <strong>33 today.</strong></span>
+          </div>
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--backlog" aria-hidden="true"></span>
+            <span class="demand-outcome__label">Team backlog</span>
+            <span class="demand-outcome__desc">Standard delivery work for a specific team&rsquo;s plan. The most common case by a wide margin. <strong>203 today.</strong></span>
+          </div>
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--external" aria-hidden="true"></span>
+            <span class="demand-outcome__label">External request</span>
+            <span class="demand-outcome__desc">Comes from outside the domain and needs coordination before anyone can own it. <strong>16 today.</strong></span>
+          </div>
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--resource" aria-hidden="true"></span>
+            <span class="demand-outcome__label">Resource request</span>
+            <span class="demand-outcome__desc">A staffing, budget or tooling ask rather than something to be built. Routed to portfolio review, not to a delivery team.</span>
+          </div>
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--ucf" aria-hidden="true"></span>
+            <span class="demand-outcome__label">UCF input</span>
+            <span class="demand-outcome__desc">Introduces an additional control or requirement into the <strong>Unified Control Framework (UCF)</strong> or <strong>Continuous Control Verification (CCV)</strong> programme. Ensures new controls are formally registered and verified.</span>
+          </div>
+          <div class="demand-outcome">
+            <span class="demand-outcome__dot demand-outcome__dot--ext-demand" aria-hidden="true"></span>
+            <span class="demand-outcome__label">External demand</span>
+            <span class="demand-outcome__desc">A demand directed at a group <em>outside</em> DTO &mdash; requesting that another team, function, or partner implement, develop, or manage something in DTO&rsquo;s interest. Demand Management clarifies priority and ensures the ask is formally tracked and followed up.</span>
+          </div>
+        </div>
       </div>
 
       <h3 class="subhead">Parked versus stopped</h3>
@@ -516,8 +526,8 @@
   <section class="proof-band" aria-label="Pilot evidence">
     <div class="wrap">
       <blockquote class="proof-point">
-        <p class="proof-point__label"><i data-lucide="check-circle" aria-hidden="true"></i>Already running in two teams</p>
-        <p>The process has been operating successfully in <strong>Chris Munonye&rsquo;s team</strong> and <strong>Sterling Rong&rsquo;s ServiceNow CoEI team</strong> &mdash; initially with lighter tooling &mdash; demonstrating that the workflow is practical and adaptable before full automation is in place.</p>
+        <p class="proof-point__label"><i data-lucide="check-circle" aria-hidden="true"></i>Already running across multiple teams</p>
+        <p>The process is live across several Digital Trust Office teams. <strong>Kevin D&rsquo;Costa&rsquo;s portfolio</strong> &mdash; including Cross-Risk, Legal, Internal Risk, and Conflicts &mdash; has been running this workflow already, as have <strong>Chris Munonye&rsquo;s team</strong> and <strong>Sterling Rong&rsquo;s ServiceNow CoEI team</strong>. These teams have demonstrated the process is practical and works before full automation is in place.</p>
       </blockquote>
     </div>
   </section>
